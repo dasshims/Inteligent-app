@@ -1,16 +1,16 @@
+import os
+
 import streamlit as st
 from openai import OpenAI
 import helper.github_helper as gh
 import json
-##from decouple import config
 
 # Show title and description.
 st.title("💬Intelligent Chatbot")
 st.write("This is an intelligent chatBot to help with your project data."
          "The app is connected with your Jira issues and github data.")
 
-openai_api_key = 'sk-OIElXYtNukGs9oCETxIU2c0GbDJW4oAOYJkULVDVhST3BlbkFJ0y6ZtZ7jUBe6mZaBkBtvXjbjRipz2f38BDBdlguyMA' ##config('OPENAI_API_KEY') ##st.text_input("OpenAI API Key", type="password")
-
+openai_api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=openai_api_key)
 
 
