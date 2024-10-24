@@ -1,0 +1,80 @@
+{
+  "repository": "Data Engineering Project",
+  "issues": [
+    {
+      "issue_id": 101,
+      "title": "Set up CI/CD pipeline",
+      "status": "Open",
+      "labels": ["CI/CD", "Enhancement"],
+      "assignee": {
+        "name": "Alice Johnson",
+        "email": "alice.johnson@company.com",
+        "role": "DevOps Engineer"
+      },
+      "description": "Implement a CI/CD pipeline for automated testing and deployment using GitHub Actions. This should include unit tests, integration tests, and automatic deployment to staging.",
+      "priority": "High",
+      "created_at": "2024-10-20",
+      "due_date": "2024-11-05"
+    },
+    {
+      "issue_id": 102,
+      "title": "ETL process failure handling",
+      "status": "In Progress",
+      "labels": ["ETL", "Bug"],
+      "assignee": {
+        "name": "Bob Smith",
+        "email": "bob.smith@company.com",
+        "role": "Data Engineer"
+      },
+      "description": "Fix issue where the ETL process crashes during high-volume data loads. This includes setting up a retry mechanism for failed jobs and logging detailed error reports.",
+      "priority": "Critical",
+      "created_at": "2024-10-18",
+      "due_date": "2024-10-30"
+    },
+    {
+      "issue_id": 103,
+      "title": "Optimize SQL queries for dashboard generation",
+      "status": "Open",
+      "labels": ["Dashboard", "Optimization"],
+      "assignee": {
+        "name": "Charlie Davis",
+        "email": "charlie.davis@company.com",
+        "role": "Database Administrator"
+      },
+      "description": "Optimize slow-running SQL queries used for generating dashboard metrics. This includes adding indexes, refactoring joins, and caching frequent query results.",
+      "priority": "Medium",
+      "created_at": "2024-10-22",
+      "due_date": "2024-11-15"
+    },
+    {
+      "issue_id": 104,
+      "title": "Data pipeline error alert system",
+      "status": "Closed",
+      "labels": ["Data Pipeline", "Enhancement"],
+      "assignee": {
+        "name": "Dana White",
+        "email": "dana.white@company.com",
+        "role": "Cloud Engineer"
+      },
+      "description": "Set up an alerting system for data pipeline errors, including Slack notifications and email alerts. Alerts should trigger on pipeline failures and unexpected delays.",
+      "priority": "High",
+      "created_at": "2024-09-29",
+      "closed_at": "2024-10-10"
+    },
+    {
+      "issue_id": 105,
+      "title": "Create transformation logic for ETL pipeline",
+      "status": "In Review",
+      "labels": ["ETL", "Feature"],
+      "assignee": {
+        "name": "Eve Brown",
+        "email": "eve.brown@company.com",
+        "role": "Data Scientist"
+      },
+      "description": "Write transformation logic to clean and normalize raw sales data in the ETL pipeline. Ensure the transformation adheres to the schema required for further analysis.",
+      "priority": "High",
+      "created_at": "2024-10-05",
+      "due_date": "2024-10-25"
+    }
+  ]
+}
