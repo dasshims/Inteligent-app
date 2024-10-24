@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI
 import helper.github_helper as gh
 import json
-from decouple import config
+##from decouple import config
 
 # Show title and description.
 st.title("💬Intelligent Chatbot")
