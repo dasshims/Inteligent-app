@@ -14,13 +14,22 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=openai_api_key)
 
 
-def read_data(filename="resources/data_store.json"):
-    try:
-        with open(filename, "r") as file:
-            data = json.load(file)
-        return data
-    except FileNotFoundError:
-        return []
+def read_data(directory="resources"):
+    all_data = []
+
+    for filename in os.listdir(directory):
+        if filename.endswith(".json"):
+            filepath = os.path.join(directory, filename)
+            try:
+                with open(filepath, "r") as file:
+                    data = json.load(file)
+                    all_data.append(data)
+            except FileNotFoundError:
+                print(f"File not found: {filename}")
+            except json.JSONDecodeError:
+                print(f"Error decoding JSON in file: {filename}")
+
+    return all_data
 
 if 'app_initialized' not in st.session_state:
     gh_repos = gh.fetch_github_repos()
@@ -51,7 +60,7 @@ if prompt := st.chat_input("What is up?"):
         st.markdown(prompt)
 
     stored_data = read_data()
-    system_message = "These are the information from Jira, can you remember this: " + str(stored_data)
+    system_message = "These are the information from Jira and github, can you remember this: " + str(stored_data)
     stream = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
